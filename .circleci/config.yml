@@ -1,26 +1,44 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
+### Fazer quebra de linha aonde não houver e fazer ajustes ortograficos ###
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
-jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+print("Olá meu jovem veterano, que bom vê-lo novamente por aqui, não estou conseguindo lembrar seu nome muito bem, são tantos alunos, kkkkk, mas agora me diga qual seu nome mesmo? \n")
+nome = input()
+print("")
+print("Há sim meu jovem", nome,"essas férias me deixaram um pouco esquecido, kkkkk, e que eu lembre, dei aula para você no seu primeiro semestre, mas me diga quantos anos você tem agora? \n")
+
+idade = input()
+print("")
+print("É o tempo passa meu querido", nome,"veja só, agora você está entrando na reta final da sua vida acadêmica na UNISEP, parabéns por ter chegado até aqui meu jovem acadêmico, agora vejamos você esta no auge dos seus " ,idade, "anos, você mudou muito, e agora entrará na etapa mais importante de sua jornada acadêmica, e com isso vem varias outras responsabilidades e também o TCC. \n")
+
+
+while (True) : 
+    
+    print(nome, "mas agora me diga como você esta em relação a seu TCC, está ansioso ou com medo ou está tranquilo? \n")
+    print("Digite:[ 1 - Ansioso] [2 - Medo]  [3 - Tranquilo] ")
+    reação = input()
+
+    if reação == "1":
+        print("")
+        print("Ansioso. \n")
+        print(nome, "Bixo velho, é assim mesmo, eu como professor lhe desjo boa sorte, relaxa gafanhoto, tudo vai dar certo. \n")
+    elif reação == "2":
+        print("")
+        print("Medo. \n")
+        print(nome,"Relaxa meu jovem, você ja chegou ate aqui com muita dedicação e empenho, falta só um pouquinho, você consegue. \n")
+    elif reação == "3":
+        print("")
+        print("Tranquilo. \n") 
+        print("Que bom meu garoto, então bora para essa ultima etapa de arrancar o couro",nome,"? \n")
+    ### Abertura de novos caminho se escolhido a opção 3 ###
+        print("Digite: [ 1 - Bora ] ou [ 2 - Não, pararei por aqui] ")
+        print("")
+        decisão1 = input()
+        if decisão1 == "1":
+            print("")
+            print("Então vamos nessa",nome, "vou lhe orientar no seu TCC, e lhe ajudar no que for preciso. \n")
+        elif decisão1 == "2":
+            print("")
+            print("O jovem", nome, "acabou desistindo da faculdade, e ninguem sabe ao certo porque, nem onde o mesmo se encontra atualmente. \n")
+    else:
+        print("não tem essa opção,não digitou correto? \n")
+        
